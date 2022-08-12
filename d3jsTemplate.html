@@ -69,7 +69,7 @@ var svg = d3.select("svg"),
   width = +svg.attr("width"),
   height = +svg.attr("height");
 
-  
+var path = d3.geoPath();
 var projection = d3.geoAlbersUsa()
   .translate([width / 2 - 300, height / 2]) // translate to center of screen
   .scale([1000]); // scale to see entire US
