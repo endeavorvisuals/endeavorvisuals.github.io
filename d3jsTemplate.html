@@ -38,7 +38,7 @@ div.tooltip {
 <div class="tooltip" style="opacity: 0;"></div>
 
 <script type = "text/javascript" src = "us-states.json"></script>
-<script type = "text/csv" src = "senatetest.csv"></script>
+<script type = "text/csv" src = "SenateTest.csv"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.1.2/papaparse.min.js"></script>
 
 <script>
@@ -88,7 +88,7 @@ var data = d3.map();
 
   
 
- d3.csv('senatetest.csv', function(data) {
+ d3.csv('SenateTest.csv', function(data) {
     d3.json('us-states.json', function(json) {
       for (var i = 0; i < data.length; i++) {
         var state = data[i].NAME;
