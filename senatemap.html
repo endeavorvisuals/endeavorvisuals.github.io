@@ -49,20 +49,6 @@ var colorScale = d3.scaleThreshold()
   .range(["#02061E","#040B4B","#0C24C3","#475df4","#B6BFFB","#FB9A9F","#F7454E","#E10A15","#92060D","#1D0103"]);
 
 
-var leg = d3.select("svg");
-
-leg.append("g")
-  .attr("class", "legendQuant")
-  .attr("transform", "translate(20,20)");
-
-var legend = d3.legendColor()
-    .labelFormat(d3.format(".2f"))
-    .labels(d3.legendHelpers.thresholdLabels)
-    .title("Margin")
-    .scale(colorScale)
-
-leg.select(".legendQuant")
-  .call(legend);
 
 // The svg
 var svg = d3.select("svg"),
