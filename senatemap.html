@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-
+<meta name = "viewport" content = "width=device-width,initial-scale=1">
 <!-- Load d3.js -->
 <script src="https://d3js.org/d3.v4.js"></script>
 <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
@@ -10,6 +10,21 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
 <style>
+  
+      @viewport{
+        width: device-width;
+        zoom: 1.0;
+    }
+    
+@media (min-width: 320px) {
+
+    #svg{width:500px; height: 500px;}
+
+}
+
+@media (min-width: 900px) {
+
+  #svg{width:1920px; height: 1080px;}
 
 .d3-tip {
   line-height: 1;
@@ -34,7 +49,7 @@ div.tooltip {
 </head>
 <!-- Create an element where the map will take place -->
 <body>
-<svg height = 1000 width = 1000> </svg>
+<svg id = "svg"> </svg>
 <div class="tooltip" style="opacity: 0;"></div>
 
 <script type = "text/javascript" src = "us-states.json"></script>
@@ -57,7 +72,7 @@ var svg = d3.select("svg"),
 
 var path = d3.geoPath();
 var projection = d3.geoAlbersUsa()
-  .translate([width/2, height/2]) // translate to center of screen
+  .translate([screen.width/2, screen.height/2-(screen.height/10]) // translate to center of screen
   .scale([1500]); // scale to see entire US
 
 // Data and color scale
