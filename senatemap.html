@@ -57,7 +57,7 @@ var svg = d3.select("svg"),
 
 var path = d3.geoPath();
 var projection = d3.geoAlbersUsa()
-  .translate([width/2-50, height/2-50]) // translate to center of screen
+  .translate([width/2+50, height/2-50]) // translate to center of screen
   .scale([1500]); // scale to see entire US
 
 // Data and color scale
