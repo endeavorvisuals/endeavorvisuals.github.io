@@ -48,7 +48,7 @@ div.tooltip {
 </head>
 <!-- Create an element where the map will take place -->
 <body>
-<svg id = "svg"> </svg>
+<svg width = 2000 height = 2000> </svg>
 <div class="tooltip" style="opacity: 0;"></div>
 
 <script type = "text/javascript" src = "us-states.json"></script>
@@ -72,7 +72,7 @@ var svg = d3.select("svg"),
 var path = d3.geoPath();
 var projection = d3.geoAlbersUsa()
   .translate([screen.width/2, screen.height/2-(screen.height/10)]) // translate to center of screen
-  .scale([1500]); // scale to see entire US
+  .scale([screen.width*screen.height/900]); // scale to see entire US
 
 // Data and color scale
 var data = d3.map();
