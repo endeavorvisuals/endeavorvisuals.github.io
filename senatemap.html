@@ -10,7 +10,21 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
 <style>
+    @viewport{
+        width: device-width;
+        zoom: 1.0;
+    }
+    
+@media only screen and (min-width: 320px) {
 
+    #svg{width:500px; height: 500px;}
+
+}
+
+@media only screen and (min-width: 900px) {
+
+  #svg{width:1920px; height: 1080px;}
+  
 .d3-tip {
   line-height: 1;
   padding: 12px;
@@ -34,7 +48,7 @@ div.tooltip {
 </head>
 <!-- Create an element where the map will take place -->
 <body>
-<svg width = 1920 height = 1080> </svg>
+<svg id = "svg"> </svg>
 <div class="tooltip" style="opacity: 0;"></div>
 
 <script type = "text/javascript" src = "us-states.json"></script>
