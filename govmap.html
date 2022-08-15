@@ -135,6 +135,10 @@ var data = d3.map();
                 .duration(200)
                 .style("stroke-width", "3px")
                 .style("stroke", "black")})
+      .on('mousemove', function(d) {		
+            div.html(d.properties.name + "<br><br> Margin: "  + d.properties.margin + "<br><br> Rating: " + d.properties.rating + "<br><br> PCT Chance of Republican Victory: " + d.properties.repwins)	
+            .style("left", (d3.mouse(this)[0]+30) + "px")
+            .style("top", (d3.mouse(this)[1]) + "px")})
       .on('mouseout', function(d) {		
             div.transition()		
                 .duration(500)		
