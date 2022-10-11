@@ -59,8 +59,8 @@ div.tooltip {
 
 var colorScale = d3.scaleThreshold()
   
-  .domain(["Safe D", "Likely D","Lean D","Tossup","Lean R","Likely R","Safe R"])
-  .range(["#3939ff","#7272ff","#ababff","#ebda49","#ffe3e3","#ffaaaa","#ff7171"]);
+  .domain([-50, -15,-5,-1,0,1,5,15,50, 100])
+  .range(["#0101ff","#3939ff","#7272ff","#ababff","#e3e3ff","#ffe3e3","#ffaaaa","#ff7171","#ff3838","#ff0000"]);
 
 
 
