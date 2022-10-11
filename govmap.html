@@ -63,8 +63,8 @@ div.tooltip {
 
 var colorScale = d3.scaleThreshold()
   
-  .domain([-50, -15,-5,-1,0,1,5,15,50, 100])
-  .range(["#0101ff","#3939ff","#7272ff","#ababff","#e3e3ff","#ffe3e3","#ffaaaa","#ff7171","#ff3838","#ff0000"]);
+  .domain(["Solid D", "Likely D","Lean D","Tossup","Lean R","Likely R","Solid R"])
+  .range(["#0101ff","#7272ff","#acb6fc","#f7c87c","#fcacb0","#ff7171","#ff0000"]);
 
 
 
@@ -149,7 +149,7 @@ var data = d3.map();
                 .style("stroke", "transparent")})
       // set the color of each country
       .attr("fill", function (d) {
-        return colorScale(d.properties.margin);
+        return colorScale(d.properties.rating);
         
       });
     })});
